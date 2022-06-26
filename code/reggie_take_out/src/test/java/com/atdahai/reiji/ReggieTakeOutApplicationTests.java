@@ -10,4 +10,10 @@ class ReggieTakeOutApplicationTests {
     void contextLoads() {
     }
 
+    @Test
+    public void test01(){
+        String path = "asf.jsp";
+        System.out.println(path.substring(path.lastIndexOf(".")));
+    }
+
 }

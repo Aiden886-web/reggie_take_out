@@ -3,8 +3,6 @@ package com.atdahai.reiji.controller;
 import com.atdahai.reiji.common.R;
 import com.atdahai.reiji.entity.Employee;
 import com.atdahai.reiji.service.EmployeeService;
-import com.atdahai.reiji.utils.MD5;
-import com.baomidou.mybatisplus.core.MybatisConfiguration;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import lombok.extern.slf4j.Slf4j;
@@ -14,7 +12,6 @@ import org.springframework.util.DigestUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
-import java.time.LocalDateTime;
 
 @RestController
 @Slf4j
@@ -162,7 +159,7 @@ public class EmployeeController {
         if(employee != null){
             return R.success(employee);
         }
-        return R.error("查询失败");
+        return R.error("没有查询到对应的员工信息");
     }
 
 

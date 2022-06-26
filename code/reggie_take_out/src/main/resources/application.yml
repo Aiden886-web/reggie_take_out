@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8081
 spring:
   application:
     name: reggie_take_out
@@ -17,3 +17,5 @@ mybatis-plus:
   global-config:
     db-config:
       id-type: ASSIGN_ID
+reiji:
+  path: D:\img\

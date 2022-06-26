@@ -18,6 +18,7 @@ public class GlobalExceptionHandler {
      * 异常处理方法
      * @param ex
      * @return
+     * 这个异常不是很懂
      */
     @ExceptionHandler(SQLIntegrityConstraintViolationException.class)
     public R<String> exceptionHandler(SQLIntegrityConstraintViolationException ex){
@@ -30,4 +31,14 @@ public class GlobalExceptionHandler {
         return R.error("位置错误");
     }
 
+    /**
+     * 异常处理方法
+     * @param ex
+     * @return
+     */
+    @ExceptionHandler(CustomException.class)
+    public R<String> exceptionHandler(CustomException ex){
+        log.info(ex.getMessage());
+        return R.error(ex.getMessage());
+    }
 }
